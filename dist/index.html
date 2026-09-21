@@ -3,128 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Napi Ige – egy gondolat, amely elkísér a napodban. Lapozz bele az októberi kiadványba.">
-  <title>Napi Ige – Minden napra egy üzenet</title>
+  <meta name="description" content="Napi Ige – Isten szava minden napra. Rövid napi útravaló és missziós kiadvány.">
+  <title>Napi Ige – Isten szava minden napra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23eb002b'/%3E%3Cpath d='M18 17h13c7 0 12 4 12 10v20c-3-3-7-4-12-4H18V17Zm28 3v27c-3-3-7-4-12-4V20c5 0 9 1 12 3Z' fill='white'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ed1b2f'/%3E%3Cpath d='M18 17h13c7 0 12 4 12 10v20c-3-3-7-4-12-4H18V17Zm28 3v27c-3-3-7-4-12-4V20c5 0 9 1 12 3Z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Ugrás a tartalomra</a>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Napi Ige kezdőlap">
-      <span class="brand-mark" aria-hidden="true">N</span>
-      <span>NAPI IGE</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Napi Ige kezdőlap"><img src="assets/NAPI-IGE-LOGO.png" alt="Napi Ige"></a>
     <nav aria-label="Fő navigáció">
-      <a href="#kiadvany">A kiadványról</a>
-      <a href="#belelapozok">Belelapozok</a>
-      <a href="#kapcsolat">Kapcsolat</a>
+      <a href="#rolunk">Mi a Napi Ige?</a><a href="#belelapozok">Lapozz bele!</a><a href="#igenyles">Igénylés</a><a href="#gyik">Gyakori kérdések</a>
     </nav>
-    <a class="button button-small" href="#belelapozok">Elolvasom <span aria-hidden="true">↗</span></a>
-    <button class="menu-button" type="button" aria-label="Menü megnyitása" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+    <a class="header-cta" href="#igenyles">Szeretném a Napi Igét</a>
+    <button class="menu-button" type="button" aria-label="Menü megnyitása" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
-      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Októberi szám</p>
-        <h1>Egy ige.<br><em>Minden napra.</em></h1>
-        <p class="hero-lead">Csendesedj el néhány percre. A Napi Ige rövid olvasmányai kapaszkodót adnak, és közelebb visznek Isten üzenetéhez.</p>
+        <p class="kicker">Napi Ige</p>
+        <h1>Isten szava.<br><span>Minden napra.</span></h1>
+        <p class="hero-lead">Néhány perc, hogy az Ige ne csak megszólaljon, hanem elkísérjen.</p>
         <div class="hero-actions">
-          <a class="button" href="#belelapozok">Belelapozok <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#kiadvany">Ismerd meg a kiadványt <span aria-hidden="true">→</span></a>
+          <a class="button" href="#igenyles">Szeretném a Napi Igét <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#belelapozok">Megnézem a kiadványt <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <div class="hero-verse" aria-label="Napi gondolat">
-        <div class="verse-number">01</div>
-        <blockquote>„Igéd mécses a lábam előtt, és ösvényem világossága.”</blockquote>
-        <cite>Zsoltárok 119,105</cite>
-        <div class="verse-line"><span></span><b>31</b></div>
-      </div>
-      <p class="scroll-note">Görgess tovább <span aria-hidden="true">↓</span></p>
+      <aside class="hero-statement" aria-label="A Napi Ige rövid bemutatása">
+        <span class="statement-index">01</span>
+        <p>Néha egyetlen mondat is elég ahhoz, hogy másképp induljon a nap.</p>
+        <div class="statement-rule"></div>
+        <small>Egy ige. Egy rövid elmélkedés. Néhány perc Istennel.</small>
+      </aside>
     </section>
 
-    <section class="intro" id="kiadvany">
-      <div>
-        <p class="eyebrow"><span></span> Napi útravaló</p>
-        <h2>Egy rövid megálló.<br>Egy fontos gondolat.</h2>
+    <section class="about section" id="rolunk">
+      <div class="section-title"><p class="eyebrow">Mi a Napi Ige?</p><h2>Egy kis idő Istennel,<br><span>minden nap.</span></h2></div>
+      <div class="section-copy">
+        <p class="lead">A Napi Ige azért született, hogy segítsen nap mint nap megállni egy pillanatra, meghallani Isten szavát, és felfedezni, mit üzen nekünk éppen ma.</p>
+        <p>A kiadvány rövid napi útravalót kínál azoknak, akik szeretnének megállni Isten igéje mellett, elcsendesedni és magukkal vinni egy gondolatot a napjukba.</p>
+        <p><strong>Ugyanakkor ez egy missziós kiadvány.</strong> Szeretnénk, hogy Isten Igéje oda is eljusson, ahol nagy szükség van rá, de mégsem biztos, hogy elérhető: börtönökbe, kórházakba és orvosi rendelőkbe.</p>
       </div>
-      <div class="intro-copy">
-        <p>Minden nap tartogat egy üzenetet. A Napi Ige abban segít, hogy ezt a rohanásban is meghalld: néhány perc olvasás, elmélkedés és ima.</p>
-        <div class="facts">
-          <div><strong>31</strong><span>nap</span></div>
-          <div><strong>5</strong><span>perc naponta</span></div>
-          <div><strong>1</strong><span>útitárs</span></div>
-        </div>
+    </section>
+
+    <section class="benefits red-section" id="mit-ad">
+      <div class="section-title light-title"><p class="eyebrow">Mit ad neked a Napi Ige?</p><h2>Állj meg. Olvasd.<br>Engedd, hogy megszólítson.</h2></div>
+      <div class="benefit-grid">
+        <article><span>01</span><h3>Az Ige</h3><p>Minden nap egy rövid szentírási idézet.</p></article>
+        <article><span>02</span><h3>Elmélkedés</h3><p>Gondolatok, amelyek közel hozzák az Igét a mindennapi életünkhöz.</p></article>
+        <article><span>03</span><h3>Útravaló</h3><p>Néhány perc és egy nyitott szív – valami, amit magaddal vihetsz.</p></article>
       </div>
+      <p class="red-section-note">A döntéseinkhez, kapcsolatainkhoz, örömeinkhez, küzdelmeinkhez és kérdéseinkhez.</p>
     </section>
 
     <section class="reader-section" id="belelapozok">
-      <div class="section-heading">
-        <p class="eyebrow light"><span></span> Lapozható kiadvány</p>
-        <h2>Vidd magaddal<br>az októberi üzeneteket.</h2>
+      <div class="reader-heading">
+        <div><p class="eyebrow">Lapozz bele!</p><h2>Nézd meg, milyen egy nap<br><span>a Napi Igével!</span></h2></div>
         <p>Lapozz az oldalak között, nagyíts bele, vagy nyisd meg teljes képernyőn.</p>
       </div>
-
       <div class="reader-shell" id="readerShell">
         <div class="reader-toolbar">
           <p><span class="status-dot"></span><span id="readerStatus">A kiadvány betöltése…</span></p>
-          <div class="toolbar-actions">
-            <button type="button" id="zoomOut" aria-label="Kicsinyítés">−</button>
-            <span id="zoomValue" aria-live="polite">100%</span>
-            <button type="button" id="zoomIn" aria-label="Nagyítás">+</button>
-            <button type="button" id="fullscreen" aria-label="Teljes képernyő">⛶</button>
-          </div>
+          <div class="toolbar-actions"><button type="button" id="zoomOut" aria-label="Kicsinyítés">−</button><span id="zoomValue" aria-live="polite">100%</span><button type="button" id="zoomIn" aria-label="Nagyítás">+</button><button type="button" id="fullscreen" aria-label="Teljes képernyő">⛶</button></div>
         </div>
-
         <div class="book-stage" id="bookStage" tabindex="0" aria-label="Lapozható Napi Ige kiadvány">
           <button class="page-arrow previous" id="previousPage" type="button" aria-label="Előző oldal">←</button>
-          <div class="book" id="book" aria-live="polite">
-            <div class="book-loading" id="bookLoading">
-              <span class="loading-mark">N</span>
-              <p>Keressük a kiadványt…</p>
-            </div>
-            <canvas id="leftPage" class="book-page left-page"></canvas>
-            <canvas id="rightPage" class="book-page right-page"></canvas>
-          </div>
+          <div class="book" id="book" aria-live="polite"><div class="book-loading" id="bookLoading"><img src="assets/NAPI-IGE-LOGO.png" alt=""><p>Keressük a kiadványt…</p></div><canvas id="leftPage" class="book-page left-page"></canvas><canvas id="rightPage" class="book-page right-page"></canvas></div>
           <button class="page-arrow next" id="nextPage" type="button" aria-label="Következő oldal">→</button>
         </div>
-
-        <div class="missing-pdf" id="missingPdf" hidden>
-          <p>A „2610-NAPI-IGE-OKTOBER.pdf” fájl még nincs a projektben.</p>
-          <label class="button upload-button" for="pdfUpload">PDF megnyitása</label>
-          <input id="pdfUpload" type="file" accept="application/pdf" hidden>
-        </div>
-
-        <div class="reader-footer">
-          <span id="pageIndicator">– / –</span>
-          <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-          <a id="downloadPdf" href="assets/2610-NAPI-IGE-OKTOBER.pdf" download>PDF letöltése ↓</a>
-        </div>
+        <div class="missing-pdf" id="missingPdf" hidden><div><strong>A kiadvány hamarosan itt is lapozható lesz.</strong><p>A PDF ideiglenesen a saját gépedről is megnyitható.</p></div><label class="button upload-button" for="pdfUpload">PDF megnyitása</label><input id="pdfUpload" type="file" accept="application/pdf" hidden></div>
+        <div class="reader-footer"><span id="pageIndicator">– / –</span><div class="progress" aria-hidden="true"><span id="progressBar"></span></div><a id="downloadPdf" href="assets/2610-NAPI-IGE-OKTOBER.pdf" download>PDF letöltése ↓</a></div>
       </div>
     </section>
 
-    <section class="closing" id="kapcsolat">
-      <p class="eyebrow"><span></span> Legyen része a napodnak</p>
-      <h2>Vidd tovább<br><em>az Igét.</em></h2>
-      <p>Nyisd ki minden reggel. Olvass el egy oldalt. Hagyd, hogy a nap folyamán is veled maradjon.</p>
-      <a class="button" href="#belelapozok">Kezdem az olvasást <span aria-hidden="true">↑</span></a>
+    <section class="for-you section" id="neked-szol">
+      <div class="section-title"><p class="eyebrow">Neked szól, ha…</p><h2>Isten ma is<br><span>szól hozzád.</span></h2></div>
+      <ol class="for-you-list">
+        <li><span>01</span><p>Szeretnél minden nap időt adni Istennek, még akkor is, ha csak néhány perced van.</p></li>
+        <li><span>02</span><p>Rendszeresebben olvasnád a Szentírást, de nehéz megtalálnod, hogyan kezdd el.</p></li>
+        <li><span>03</span><p>Jó lenne, ha az Ige nemcsak szép idézet maradna, hanem kapcsolódna ahhoz, amit éppen átélsz.</p></li>
+        <li><span>04</span><p>Keresed Isten hangját a döntéseidben, örömeidben és nehézségeidben.</p></li>
+      </ol>
+    </section>
+
+    <section class="vox-section red-section" id="vox-dei">
+      <div class="vox-brand"><p class="eyebrow">A Napi Ige és a Vox Dei</p><h2>Folytasd<br>az utat!</h2><p class="vox-mantra">Olvasd. Hallgasd. Éld meg.</p></div>
+      <div class="vox-copy"><p>A nyomtatott kiadvány és a Vox Dei egymást kiegészítve segítik a mindennapi lelki elmélyülést.</p><p>A Napi Ige lapjairól szentek életéhez, Lelki Utakhoz, imádságokhoz, hangos bibliai tartalmakhoz és más lelki anyagokhoz is eljuthatsz. A Vox Dei alkalmazásban a teljes Szentírás is elérhető Káldi-Neovulgáta fordításban.</p><a class="button button-white" href="https://voxdei.hu" target="_blank" rel="noopener">Felfedezem a Vox Dei-t <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="order-section section" id="igenyles">
+      <div class="section-title"><p class="eyebrow">Szeretnéd havonta kézbe venni?</p><h2>Igényeld a<br><span>Napi Igét!</span></h2></div>
+      <div class="order-card"><p>A Napi Ige az EWTN közösségszolgálatán keresztül igényelhető.</p><a href="tel:+3617808085"><small>Telefonon</small><strong>+36 1 780 80 85</strong><span>→</span></a><a href="mailto:kozossegszolgalat@ewtn.hu"><small>E-mailben</small><strong>kozossegszolgalat@ewtn.hu</strong><span>→</span></a></div>
+    </section>
+
+    <section class="support-section">
+      <div class="support-copy"><p class="eyebrow">Segíts, hogy másokhoz is eljusson!</p><h2>Támogasd a Napi Ige<br><span>misszióját!</span></h2><p>A Napi Ige egy missziós kiadvány. Támogatásoddal olyanokhoz is eljuthat nyomtatott formában, akiknek különösen nagy szükségük lehet a remény és az örömhír üzenetére: börtönökbe, kórházakba és idősotthonokba.</p><a class="button" href="https://voxdei.hu/adomany" target="_blank" rel="noopener">Támogatom a Napi Igét <span aria-hidden="true">↗</span></a></div>
+      <div class="bank-details"><p class="bank-label">Banki utalás</p><dl><div><dt>Kedvezményezett</dt><dd>VoxDei.app</dd></div><div><dt>Számlaszám</dt><dd>OTP Bank<br>1174 1017–2415 7649</dd></div><div><dt>Megjegyzés</dt><dd>„Napi Ige”</dd></div></dl></div>
+    </section>
+
+    <section class="faq-section section" id="gyik">
+      <div class="section-title faq-title"><p class="eyebrow">Gyakori kérdések</p><h2>Amit érdemes<br><span>tudni.</span></h2></div>
+      <div class="faq-list">
+        <details open><summary>Mennyibe kerül?<span>+</span></summary><p>A Napi Ige egy missziós kiadvány. Nem rendelünk hozzá árat, ugyanakkor kérjük, hogy lehetőségeidhez mérten támogasd a missziót. A javasolt összeg havi 2–3 000 Ft.</p></details>
+        <details><summary>Milyen gyakran jelenik meg?<span>+</span></summary><p>A Napi Ige magazin havonta jelenik meg.</p></details>
+        <details><summary>Hogyan tudom megrendelni?<span>+</span></summary><p>Telefonon a +36 1 780 80 85 számon, vagy e-mailben a kozossegszolgalat@ewtn.hu címen jelezheted az igényedet.</p></details>
+        <details><summary>Postán is kérhetem?<span>+</span></summary><p>Elsősorban a Médiamissziós kollégáinkon keresztül juttatjuk el hozzád a kiadványt.</p></details>
+        <details><summary>Több példányt is rendelhetek?<span>+</span></summary><p>Igen. Kérjük, gondoskodj arról, hogy a példányok eljussanak az érintettekhez, és ők is megismerjék a Napi Ige misszióját.</p></details>
+        <details><summary>Van csoportos rendelési lehetőség?<span>+</span></summary><p>Igen, plébániák és közösségek számára is. Egyeztess kollégáinkkal a +36 1 780 80 85-ös telefonszámon.</p></details>
+        <details><summary>Hogyan támogathatom a missziót?<span>+</span></summary><p>Online fizetéssel, banki átutalással, vagy a közösségszolgálaton igényelt csekken. Az online vagy átutalásos támogatás megjegyzésében tüntesd fel: „Napi Ige”.</p></details>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <img src="assets/NAPI-IGE-LOGO.png" alt="Napi Ige"><h2>Adj minden nap néhány percet<br>magadnak <span>Istennel!</span></h2><p>Nem kell mindent egyszerre megértened. Nem kell tökéletesnek lenned. Nem kell órákat rászánnod.</p><strong>Csak nyisd ki. Olvasd el. És engedd, hogy az Ige megszólítson.</strong><a class="button button-white" href="#igenyles">Szeretném a Napi Igét <span aria-hidden="true">↑</span></a>
     </section>
   </main>
-
-  <footer>
-    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">N</span><span>NAPI IGE</span></a>
-    <p>© 2026 Napi Ige. Minden jog fenntartva.</p>
-    <p>BonumTV</p>
-  </footer>
-
+  <footer><a class="footer-logo" href="#top"><img src="assets/NAPI-IGE-LOGO.png" alt="Napi Ige"></a><p>© 2026 Napi Ige. Minden jog fenntartva.</p><a href="https://voxdei.hu" target="_blank" rel="noopener">Vox Dei ↗</a></footer>
   <script type="module" src="app.js"></script>
 </body>
 </html>
