@@ -1,4 +1,4 @@
-:root { --red:#ed1b2f; --red-dark:#c90018; --black:#101010; --white:#fff; --off-white:#fff; --gray:#101010; --line:#dedede; --max:1240px; }
+:root { --red:#EB002B; --red-dark:#c90018; --black:#101010; --white:#fff; --off-white:#fff; --gray:#101010; --line:#dedede; --max:1240px; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; color:var(--black); background:var(--white); font-family:"Raleway",Arial,sans-serif; font-size:16px; line-height:1.65; }
