@@ -18,6 +18,7 @@ const els = {
   next: document.querySelector("#nextPage"),
   indicator: document.querySelector("#pageIndicator"),
   progress: document.querySelector("#progressBar"),
+  orderCta: document.querySelector("#readerOrderCta"),
   status: document.querySelector("#readerStatus"),
   zoomIn: document.querySelector("#zoomIn"),
   zoomOut: document.querySelector("#zoomOut"),
@@ -94,6 +95,7 @@ function updateControls() {
   els.progress.style.width = `${(lastVisible / PAGE_COUNT) * 100}%`;
   els.previous.disabled = isAnimating || currentPage <= 1;
   els.next.disabled = isAnimating || lastVisible >= PAGE_COUNT;
+  els.orderCta.hidden = lastVisible < PAGE_COUNT || isAnimating;
   els.previous.setAttribute("aria-disabled", String(els.previous.disabled));
   els.next.setAttribute("aria-disabled", String(els.next.disabled));
 }
