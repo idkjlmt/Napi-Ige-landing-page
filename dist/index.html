@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ed1b2f'/%3E%3Cpath d='M18 17h13c7 0 12 4 12 10v20c-3-3-7-4-12-4H18V17Zm28 3v27c-3-3-7-4-12-4V20c5 0 9 1 12 3Z' fill='white'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">Ugrás a tartalomra</a>
@@ -72,10 +72,15 @@
         </div>
         <div class="book-stage" id="bookStage" tabindex="0" aria-label="Lapozható Napi Ige kiadvány">
           <button class="page-arrow previous" id="previousPage" type="button" aria-label="Előző oldal">←</button>
-          <div class="book" id="book" aria-live="polite"><div class="book-loading" id="bookLoading"><img src="assets/NAPI-IGE-LOGO.png" alt=""><p>Keressük a kiadványt…</p></div><canvas id="leftPage" class="book-page left-page"></canvas><canvas id="rightPage" class="book-page right-page"></canvas></div>
+          <div class="book" id="book" aria-live="polite" aria-busy="true">
+            <div class="book-loading" id="bookLoading"><img src="assets/NAPI-IGE-LOGO.png" alt=""><p id="loadingText">A kiadvány betöltése…</p><span class="loading-track" aria-hidden="true"><span id="loadingBar"></span></span></div>
+            <div class="page-slot left-page" id="leftPage" aria-hidden="true"><img alt=""></div>
+            <div class="page-slot right-page" id="rightPage" aria-hidden="true"><img alt=""></div>
+            <div class="turn-sheet" id="turnSheet" aria-hidden="true" hidden><div class="turn-face turn-front"><img alt=""></div><div class="turn-face turn-back"><img alt=""></div></div>
+          </div>
           <button class="page-arrow next" id="nextPage" type="button" aria-label="Következő oldal">→</button>
         </div>
-        <div class="missing-pdf" id="missingPdf" hidden><div><strong>A kiadvány hamarosan itt is lapozható lesz.</strong><p>A PDF ideiglenesen a saját gépedről is megnyitható.</p></div><label class="button upload-button" for="pdfUpload">PDF megnyitása</label><input id="pdfUpload" type="file" accept="application/pdf" hidden></div>
+        <div class="reader-error" id="readerError" hidden><strong>A kiadvány egyik oldala nem töltődött be.</strong><button type="button" id="retryBook">Újrapróbálom</button></div>
         <div class="reader-footer"><span id="pageIndicator">– / –</span><div class="progress" aria-hidden="true"><span id="progressBar"></span></div><a id="downloadPdf" href="assets/2610-NAPI-IGE-OKTOBER.pdf" download>PDF letöltése ↓</a></div>
       </div>
     </section>
@@ -123,6 +128,6 @@
     </section>
   </main>
   <footer><a class="footer-logo" href="#top"><img src="assets/NAPI-IGE-LOGO.png" alt="Napi Ige"></a><p>© 2026 Napi Ige. Minden jog fenntartva.</p><a href="https://voxdei.hu" target="_blank" rel="noopener">Vox Dei ↗</a></footer>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=2"></script>
 </body>
 </html>
