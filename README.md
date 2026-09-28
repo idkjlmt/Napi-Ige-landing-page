@@ -1,6 +1,9 @@
-# Napi Ige landing page
+# Napi Ige és Navarra Biblia landing oldalak
 
-Első, statikus weboldal-tervezet a Napi Ige októberi kiadványához.
+A Vox Dei vizuális rendszeréhez tartozó, reszponzív landing oldalak működő lapozható mintakiadványokkal.
+
+- `/` – Napi Ige
+- `/navarra-biblia/` – Navarra Biblia közösségi előrendelési oldal és 121 oldalas Máté mintakötet
 
 ## Helyi megnyitás
 
