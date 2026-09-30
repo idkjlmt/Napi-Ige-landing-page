@@ -272,21 +272,17 @@ document.querySelectorAll("#mainNav a").forEach(link => link.addEventListener("c
   menuButton.setAttribute("aria-expanded", "false");
 }));
 
-document.querySelector("#orderForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = "Navarra Biblia előrendelés";
-  const body = [
-    "Kedves EWTN Kiadó!",
-    "",
-    "Szeretnék csatlakozni a Navarra Biblia közösségi előrendeléséhez.",
-    "",
-    `Név: ${data.get("name")}`,
-    `E-mail: ${data.get("email")}`,
-    `Példányszám: ${data.get("quantity")}`,
-    `Megjegyzés: ${data.get("message") || "–"}`
-  ].join("\n");
-  window.location.href = `mailto:shop@ewtn.hu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+const copyAccount = document.querySelector("#copyAccount");
+copyAccount?.addEventListener("click", async () => {
+  const account = copyAccount.dataset.account;
+  const originalLabel = copyAccount.textContent;
+  try {
+    await navigator.clipboard.writeText(account);
+    copyAccount.textContent = "Bankszámlaszám kimásolva ✓";
+  } catch {
+    copyAccount.textContent = "1174101724157649";
+  }
+  window.setTimeout(() => { copyAccount.textContent = originalLabel; }, 2600);
 });
 
 loadInitial();
