@@ -79,10 +79,13 @@ function setSlot(slot, page) {
   const image = slot.querySelector("img");
   if (!page) {
     slot.classList.add("is-empty");
+    slot.setAttribute("aria-hidden", "true");
     image.removeAttribute("src");
+    image.alt = "";
     return;
   }
   slot.classList.remove("is-empty");
+  slot.setAttribute("aria-hidden", "false");
   image.src = PAGE_PATH(page);
   image.alt = `Navarra Biblia – ${page}. oldal`;
 }
