@@ -263,17 +263,21 @@ window.addEventListener("resize", () => {
   renderCurrent();
 });
 
-const menuButton = document.querySelector(".menu-button");
-const siteHeader = document.querySelector(".site-header");
-menuButton.addEventListener("click", () => {
-  const open = siteHeader.classList.toggle("is-open");
+const menuButton = document.querySelector(".header-menu-btn");
+const mobileMenu = document.querySelector("#voxMobileMenu");
+function setMenu(open) {
+  mobileMenu.hidden = !open;
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "Menü bezárása" : "Menü megnyitása");
+}
+menuButton.addEventListener("click", () => setMenu(mobileMenu.hidden));
+mobileMenu.addEventListener("click", event => {
+  if (event.target === mobileMenu || event.target.closest("a")) setMenu(false);
 });
-document.querySelectorAll("#mainNav a").forEach(link => link.addEventListener("click", () => {
-  siteHeader.classList.remove("is-open");
-  menuButton.setAttribute("aria-expanded", "false");
-}));
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !mobileMenu.hidden) { setMenu(false); menuButton.focus(); }
+});
+window.matchMedia("(min-width:768px)").addEventListener("change", () => setMenu(false));
 
 const copyAccount = document.querySelector("#copyAccount");
 copyAccount?.addEventListener("click", async () => {
