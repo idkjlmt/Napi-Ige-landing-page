@@ -38,7 +38,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .menu-button span { display: block; width: 20px; height: 2px; margin: 5px auto; background: var(--ink); transition: transform .2s; }
 
 .hero { position: relative; width: 100%; min-height: clamp(650px, 74vh, 840px); margin: 0; padding: 88px max(32px, calc((100vw - 1180px) / 2)); display: flex; align-items: center; overflow: hidden; background: #d8d0c5; }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgba(18,14,12,.74) 0%, rgba(18,14,12,.55) 32%, rgba(18,14,12,.12) 58%, rgba(18,14,12,0) 76%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgba(18,14,12,.68) 0%, rgba(18,14,12,.48) 32%, rgba(18,14,12,.1) 57%, rgba(18,14,12,0) 72%); pointer-events: none; }
 .hero-copy { position: relative; z-index: 2; width: min(600px, 48vw); color: #fff; }
 .eyebrow { margin: 0 0 12px; color: var(--red); font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
@@ -49,8 +49,7 @@ h1 span, h2 span { color: var(--red); }
 .button-light { color: var(--ink); background: #fff; border: 1px solid #ddd; }
 .button-light:hover { color: var(--red); background: #fff; box-shadow: var(--shadow); }
 .hero-visual { position: absolute; inset: 0; z-index: 0; margin: 0; overflow: hidden; background: #eee8e0; }
-.hero-visual::before { content: ""; position: absolute; inset: -5%; background: url("assets/navarra-hero.png") center / cover no-repeat; filter: blur(24px); opacity: .72; transform: scale(1.08); }
-.hero-visual img { position: absolute; top: 0; right: 0; z-index: 1; width: auto; height: 100%; max-width: none; object-fit: contain; }
+.hero-visual img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; }
 
 .credo { margin-top: 28px; padding: 30px 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; color: #fff; background: var(--red); border-radius: var(--radius); }
 .credo p { margin: 0; font-size: clamp(1.1rem, 2vw, 1.55rem); }
@@ -231,7 +230,7 @@ h2 { margin-bottom: 22px; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1.04
   .hero { min-height: 720px; margin: 0; padding: 80px 24px 52px; align-items: flex-end; }
   .hero::after { background: linear-gradient(0deg, rgba(18,14,12,.84) 0%, rgba(18,14,12,.58) 46%, rgba(18,14,12,.08) 78%); }
   .hero-copy { width: 100%; }
-  .hero-visual img { right: -170px; }
+  .hero-visual img { object-position: 69% center; }
   .credo { padding: 22px; grid-template-columns: 1fr; gap: 4px; }
   .introduction, .features, .support-intro, .roadmap, .reader-heading, .bank-card { grid-template-columns: 1fr; gap: 28px; }
   .introduction, .features, .pricing, .roadmap { padding-top: 80px; }
