@@ -1,0 +1,69 @@
+/* Navarra-only layout corrections. Keep the supplied artwork intact. */
+html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+main, section, .section > *, .page-width > * { min-width: 0; }
+body .button, body button, .reader-shell button, .header-auth-button, .reader-links .reader-order {
+  border-radius: 999px;
+}
+.centered-cta { max-width: 100%; }
+.bank-details dd, .bank-details a { overflow-wrap: anywhere; }
+.footer-bottom, .footer-bottom p, .footer-bottom-links { white-space: normal; min-width: 0; }
+.footer-bottom-links, .footer-app-buttons { flex-wrap: wrap; }
+
+/* The natural image ratio defines the hero height, not the viewport height. */
+.hero.page-width {
+  width: 100%; min-height: 0; margin: 0; padding: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr);
+}
+.hero-visual { position: relative; inset: auto; grid-area: 1 / 1; width: 100%; align-self: center; }
+.hero-visual img { position: static; width: 100%; height: auto; max-width: 100%; object-fit: contain; }
+.hero-copy {
+  grid-area: 1 / 1; width: 43%; max-width: 660px;
+  margin-left: max(32px, calc((100% - 1180px) / 2)); padding-block: 32px;
+}
+.hero h1 { font-size: clamp(2.5rem, 4.6vw, 4.6rem); line-height: 1.04; }
+
+/* Remove only the logo PNG's empty vertical margins, not its artwork. */
+.app-promo-copy > a:first-child { display: block; height: 78px; overflow: hidden; margin-bottom: 24px; }
+.app-promo-logo { width: 280px; margin: 0; transform: translateY(-110px); }
+
+@media (max-width: 1050px) {
+  /* No text can overlap the book at narrow widths or increased text sizes. */
+  .hero.page-width { display: flex; flex-direction: column; align-items: stretch; background: #eee8e0; }
+  .hero::after { display: none; }
+  .hero-copy { width: 100%; max-width: 760px; margin: 0 auto; padding: 36px 24px 24px; color: var(--ink); }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); }
+  .hero-lead { color: var(--muted); font-size: 1rem; }
+  .hero-visual { flex: none; width: 100%; }
+  .hero-actions .button { width: auto; flex: 0 1 auto; }
+}
+
+@media (max-width: 900px) {
+  /* One composed panel: copy and downloads left, phone artwork right. */
+  .app-promo { display: flex; flex-direction: row; align-items: center; min-height: 0; padding: 32px 16px; background: #f5f5f5; }
+  .app-promo-visual { position: absolute; z-index: -1; inset: 0 0 0 54%; width: auto; aspect-ratio: auto; }
+  .app-promo-visual > img { width: 100%; height: 100%; object-fit: cover; object-position: 80% center; }
+  .app-promo-copy { --app-content-inset: 0px; width: 52%; max-width: 420px; padding: 0; }
+  .app-promo-copy > a:first-child { height: 48px; margin-bottom: 22px; }
+  .app-promo-logo { width: 180px; max-width: none; transform: translate(-24px, -71px); }
+  .app-promo h2 { margin: 0; font-size: clamp(1rem, 2.5vw, 1.65rem); line-height: 1.25; letter-spacing: -.02em; overflow-wrap: anywhere; }
+  .app-qr-codes { width: 100%; max-width: 320px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; margin-top: 18px; }
+  .app-qr-codes figure { transform: none; min-width: 0; }
+  .app-qr-codes figcaption { font-size: 12px; line-height: 1.2; }
+  .app-qr-codes a { display: block; }
+}
+
+@media (max-width: 760px) {
+  .bank-details div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .reader-toolbar { flex-wrap: wrap; gap: 10px; }
+  .reader-footer { grid-template-columns: 48px minmax(0, 1fr) 48px; }
+  .reader-footer > div { min-width: 0; gap: 8px; }
+  .shop-cta .button { max-width: 100%; flex: initial; }
+}
+
+@media (max-width: 360px) {
+  .header-inner { padding-left: 145px; padding-right: 56px; }
+  .header .navarra-nav { min-width: 0; gap: 0; }
+  .hero-copy { padding-inline: 20px; }
+  .hero-actions { gap: 8px; }
+  .hero-actions .button { padding-inline: 16px; font-size: .85rem; }
+}
