@@ -9,7 +9,7 @@ body .button, body button, .reader-shell button, .header-auth-button, .reader-li
 .footer-bottom, .footer-bottom p, .footer-bottom-links { white-space: normal; min-width: 0; }
 .footer-bottom-links, .footer-app-buttons { flex-wrap: wrap; }
 
-/* Restore the original hero height. Scale from height to protect the closed book. */
+/* Full-bleed desktop artwork; the supplied wider image fills the left edge too. */
 .hero.page-width {
   width: 100%; min-height: clamp(650px, 74vh, 840px); margin: 0;
   padding: 64px max(32px, calc((100% - 1180px) / 2));
@@ -17,7 +17,7 @@ body .button, body button, .reader-shell button, .header-auth-button, .reader-li
 }
 .hero-visual { position: absolute; inset: 0; width: 100%; }
 .hero-visual picture { display: block; width: 100%; height: 100%; }
-.hero-visual img { position: absolute; inset: 0 0 auto auto; width: auto; height: min(118%, 62vw); max-width: none; object-fit: contain; }
+.hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 70% 20%; }
 .hero-copy {
   width: min(600px, 43vw); max-width: 660px; margin: 0; padding: 0; color: #fff;
 }
