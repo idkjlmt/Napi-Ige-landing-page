@@ -15,7 +15,7 @@ body { padding-top: 60px; }
 .navarra-name { text-transform: uppercase; letter-spacing: .08em; }
 .navarra-nav > div { display: flex; align-items: center; gap: 24px; }
 .navarra-nav .button { min-height: 36px; padding: 8px 16px; }
-.hero-visual img { object-position: center 72%; }
+.hero-visual img { object-position: center; }
 section[id] { scroll-margin-top: 80px; }
 .skip-link { z-index: 1100; }
 @media(max-width:767px) { .navarra-nav { align-items: flex-start; flex-direction: column; gap: 8px; padding: 12px 20px; } .navarra-nav > div { max-width:100%; overflow-x: auto; gap:20px; padding-bottom:4px; } .hero-visual img { object-position: 65% bottom; } }

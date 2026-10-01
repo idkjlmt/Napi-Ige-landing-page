@@ -1,5 +1,5 @@
 const PAGE_COUNT = 121;
-const PAGE_PATH = page => `assets/pages/navarra-mate-${String(page).padStart(3, "0")}.jpg`;
+const PAGE_PATH = page => `assets/pages/navarra-mate-${String(page).padStart(3, "0")}.jpg?v=430a158b`;
 const ANIMATION_MS = 620;
 
 const els = {
