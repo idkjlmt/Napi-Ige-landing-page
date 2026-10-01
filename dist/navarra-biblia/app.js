@@ -277,7 +277,7 @@ mobileMenu.addEventListener("click", event => {
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !mobileMenu.hidden) { setMenu(false); menuButton.focus(); }
 });
-window.matchMedia("(min-width:768px)").addEventListener("change", () => setMenu(false));
+window.matchMedia("(min-width:1100px)").addEventListener("change", () => setMenu(false));
 
 const copyAccount = document.querySelector("#copyAccount");
 copyAccount?.addEventListener("click", async () => {
